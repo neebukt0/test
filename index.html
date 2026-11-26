@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ВкусноРядом — доставка еды</title>
+<!-- Задание 7: здесь будет тег GA4 -->
+<!-- Задание 8: здесь будет код счётчика Метрики -->
+<style>
+body { font-family: sans-serif; max-width: 640px; margin: 40px auto; }
+.dish { display: flex; justify-content: space-between; padding: 12px 0;
+border-bottom: 1px solid #ddd; }
+#checkout, #success { display: none; margin-top: 24px; }
+</style>
+</head>
+<body>
+<h1>ВкусноРядом</h1>
+<h2>Меню ресторана «Восток»</h2>
+<div class="dish" data-name="Плов" data-price="2500">Плов — 2500 ₸ <button
+class="add">В корзину</button></div>
+<div class="dish" data-name="Лагман" data-price="2200">Лагман — 2200 ₸
+<button class="add">В корзину</button></div>
+<div class="dish" data-name="Самса" data-price="600">Самса — 600 ₸ <button
+class="add">В корзину</button></div>
+<p>В корзине: <span id="count">0</span> шт. на <span id="total">0</span>
+₸</p>
+<button id="toCheckout">Оформить заказ</button>
+<div id="checkout">
+<label>Способ оплаты:
+<select id="payment">
+<option value="kaspi">Kaspi</option>
+<option value="card">Банковская карта</option>
+<option value="cash">Наличные курьеру</option>
+</select>
+</label>
+<button id="pay">Оплатить</button>
+</div>
+<p id="success">Заказ оформлен! Номер заказа: <span id="orderId"></span>
+</p>
+<script src="app.js"></script>
+</body>
+</html>
